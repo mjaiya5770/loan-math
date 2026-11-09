@@ -1,0 +1,22 @@
+{
+  "name": "Loan Math \u2014 Free Online Calculators",
+  "short_name": "Loan Math",
+  "description": "Loan Math explains how borrowing is actually computed: amortization, interest and APR mechanics worked out in the open \u2014 plus the full library of 154 free calculators. No signup, no lead forms.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#0f2233",
+  "theme_color": "#2f5d8a",
+  "icons": [
+    {
+      "src": "/assets/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
