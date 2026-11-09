@@ -1,6 +1,6 @@
 /* Loan Math service worker — app-shell cache, network-first for pages.
    Calculators keep working offline once visited; ads and APIs are never intercepted. */
-const CACHE = 'loanmath-v3';
+const CACHE = 'loanmath-v4';
 const SHELL = [
   '/',
   '/index.html',
