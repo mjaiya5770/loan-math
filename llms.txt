@@ -1,15 +1,15 @@
 # Loan Math
 
-Loan Math is a free online calculator site that explains the mathematics of borrowing — amortization schedules, interest mechanics and APR, worked out in the open — plus the full library of 154 calculators. Every figure is an estimate, not a loan offer or financial advice.
+Loan Math is a free online calculator site that explains the mathematics of borrowing — amortization schedules, interest mechanics and APR, worked out in the open — plus the full library of 176 calculators. Every figure is an estimate, not a loan offer or financial advice.
 
 Made for borrowers, home buyers, car buyers and students who want to understand how a loan is computed before they sign anything.
 
-All 154 calculators are free, with no account or sign-up. Every calculator shows its formula or method and at least one worked example.
+All 176 calculators are free, with no account or sign-up. Every calculator shows its formula or method and at least one worked example.
 
 ## Key pages
 
-- [Home](https://loanmath.website/): all 154 calculators, organized by category.
-- [Embed these calculators](https://loanmath.website/embed.html): put any of the 154 Loan Math calculators on your own site for free — no account, no attribution required.
+- [Home](https://loanmath.website/): all 176 calculators, organized by category.
+- [Embed these calculators](https://loanmath.website/embed.html): put any of the 176 Loan Math calculators on your own site for free — no account, no attribution required.
 - [Partnerships](https://loanmath.website/partnerships.html): the network Loan Math belongs to, and how to partner with us.
 - [Creator ROI Hub — Earnings, Sponsorship & Fee Calculators](https://loanmath.website/creator-roi-calculators.html): The Creator ROI Hub: free calculators for people who publish for a living — YouTube and TikTok earnings, sponsorship rates, payment fees and AI API costs, with honest ranges and the math shown.
 - [Amortization, Explained: Where Your Payment Actually Goes](https://loanmath.website/guides/amortization-explained.html)
@@ -27,11 +27,12 @@ All 154 calculators are free, with no account or sign-up. Every calculator shows
 - [Amortization Calculator — Full Schedule, Extra Payments & Payoff Date](https://loanmath.website/tools/amortization-calculator.html)
 - [APR Calculator — True APR With Fees & Total Cost](https://loanmath.website/tools/apr-calculator.html)
 
-## All calculators (2 owned of 154/158 — one-owner rule)
+## All calculators (3 owned of 176/180 — one-owner rule)
 
 ### The borrowing shelf — every loan tool
 - [Amortization Calculator — Full Schedule, Extra Payments & Payoff Date](https://loanmath.website/tools/amortization-calculator.html)
 - [APR Calculator — True APR With Fees & Total Cost](https://loanmath.website/tools/apr-calculator.html)
+- [Lease Break Calculator — Early Termination Fee vs Remaining Liability](https://loanmath.website/tools/lease-break-calculator.html)
 
 ### Home projects &amp; estimators
 
