@@ -1,7 +1,7 @@
 {
-  "name": "Loan Math \u2014 Free Online Calculators",
+  "name": "Loan Math — Free Online Calculators",
   "short_name": "Loan Math",
-  "description": "Loan Math explains how borrowing is actually computed: amortization, interest and APR mechanics worked out in the open \u2014 plus the full library of 154 free calculators. No signup, no lead forms.",
+  "description": "Loan Math explains how borrowing is actually computed: amortization, interest and APR mechanics worked out in the open — plus the full library of 154 free calculators. No signup, no lead forms.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
@@ -17,6 +17,12 @@
       "src": "/assets/icon-512.png",
       "sizes": "512x512",
       "type": "image/png"
+    },
+    {
+      "src": "/assets/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
     }
   ]
 }
