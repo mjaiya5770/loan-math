@@ -82,7 +82,16 @@
       <div><strong>$0</strong><span>no signup, no fees</span></div>
     </div>
     </div>
-    <div class="hero-calc" id="heroCalc">
+    
+  </div>
+
+  <svg class="nest-motif" viewBox="0 0 200 200" fill="none" aria-hidden="true" focusable="false"><path d="M6 148 A 118 118 0 0 1 194 148" stroke="#5eead4" stroke-opacity="0.30" stroke-width="2" stroke-linecap="round"/><path d="M26 160 A 96 96 0 0 1 174 160" stroke="#ffffff" stroke-opacity="0.16" stroke-width="2" stroke-linecap="round"/><path d="M48 171 A 74 74 0 0 1 152 171" stroke="#5eead4" stroke-opacity="0.22" stroke-width="2" stroke-linecap="round"/><path d="M71 180 A 52 52 0 0 1 129 180" stroke="#ffffff" stroke-opacity="0.12" stroke-width="2" stroke-linecap="round"/></svg>
+</section>
+<section class="nn-under-hero">
+  <div class="wrap">
+    <div class="nn-uh-grid">
+      <div class="nn-uh-calc card">
+<div class="hero-calc" id="heroCalc">
       <div class="hc-bar">
         <button type="button" class="hc-bar-btn" id="hcBack" hidden aria-label="Back to the basic calculator">&larr;</button>
         <span class="hc-title" id="hcTitle">Calculator</span>
@@ -126,19 +135,7 @@
         <p class="hc-tool-foot"><button type="button" class="hc-bar-btn" id="hcClearHistory">Clear history</button></p>
       </div>
     </div>
-  </div>
-
-  <svg class="nest-motif" viewBox="0 0 200 200" fill="none" aria-hidden="true" focusable="false"><path d="M6 148 A 118 118 0 0 1 194 148" stroke="#5eead4" stroke-opacity="0.30" stroke-width="2" stroke-linecap="round"/><path d="M26 160 A 96 96 0 0 1 174 160" stroke="#ffffff" stroke-opacity="0.16" stroke-width="2" stroke-linecap="round"/><path d="M48 171 A 74 74 0 0 1 152 171" stroke="#5eead4" stroke-opacity="0.22" stroke-width="2" stroke-linecap="round"/><path d="M71 180 A 52 52 0 0 1 129 180" stroke="#ffffff" stroke-opacity="0.12" stroke-width="2" stroke-linecap="round"/></svg>
-</section>
-<section class="nn-under-hero">
-  <div class="wrap">
-    <div class="nn-uh-grid">
-      <div class="nn-uh-calc card">
-        <h2>Featured calculator: Amortization</h2>
-        <p class="nn-uh-sub">The full Amortization calculator, working right here — the frame sizes itself, so nothing hides behind a scrollbar.</p>
-        <iframe id="uhFrame" title="Amortization Calculator" loading="lazy" src="widgets/amortization-calculator.html?embed=1" style="border:0;width:100%;border-radius:12px;background:#fff"></iframe>
-        <p class="nn-uh-foot"><a href="tools/amortization-calculator.html">Read the Amortization guide &rarr;</a></p>
-      </div>
+</div>
       <div class="nn-uh-ad">
         <div class="nn-ad nn-ad-top" data-k728="cd43076016cdf0fe971d9ab19970569c" data-k320="19054d0e96bdc63cb6229eeea5ed5b17"><div class="nn-ad-label">Advertisement</div><a class="nn-house" href="calculators.html"><strong>Loan Math — how lenders actually compute it</strong><span>Amortization, interest &amp; APR mechanics, explained. No signup, ever →</span></a></div>
       </div>
@@ -482,9 +479,9 @@
     backBtn.hidden = v!=='tool';
     if(v==='default') titleEl.textContent='Calculator';
   }
-  function scrollToModule(){
+  function scrollToModule(){ if(window.__nnPreloadAt && Date.now()-window.__nnPreloadAt<2500) return;
     var r=card.getBoundingClientRect();
-    if(r.top<76||r.bottom>window.innerHeight){ card.scrollIntoView({behavior:reduced?'auto':'smooth', block:'center'}); }
+    if(r.top<76||r.bottom>window.innerHeight){ card.scrollIntoView({behavior:reduced?'auto':'smooth', block:'start'}); }
   }
   /* ---------- universal history (localStorage, one history for everything) ---------- */
   var HKEY='nnHeroHistory', history=[];
@@ -519,9 +516,9 @@
   /* ---------- loading a calculator into the module ---------- */
   var NN_WIDGETS={'amortization-calculator':1,'apr-calculator':1,'lease-break-calculator':1};
   function loadTool(href, name){
-    if(!href || href.indexOf('tools/')!==0) return false;
+    if(!href || href.indexOf('tools/')!==0) return false; window.__nnAlign=1;
     if(!name||name==='Calculator'){var ca=document.querySelector('a[href="'+href+'"]'); if(ca) name=ca.textContent.trim();}
-    currentTool={href:href, name:name||'Calculator'};
+    var _ca=document.querySelector('a[href="'+href+'"]'); if(_ca){var _h3=_ca.querySelector('h3'); if(_h3) name=_h3.textContent.trim();} currentTool={href:href, name:name||'Calculator'};
     titleEl.textContent=currentTool.name;
     var slug=href.replace('tools/','').replace('.html','');
     frame.src=(NN_WIDGETS[slug]?'widgets/'+slug+'.html':href)+'?embed=1';
@@ -535,7 +532,7 @@
   /* Deep link from guide pages: ?use=tools/<slug>.html opens that calculator here */
   (function(){ var m=/[?&]use=(tools\/[a-z0-9\-]+\.html)/.exec(window.location.search); if(!m) return; var a=document.querySelector('a[href="'+m[1]+'"]'); loadTool(m[1], a?a.textContent.trim():undefined); })();
   /* Niche default: preload the flagship calculator in the hero */
-  (function(){ if(/[?&]use=/.test(window.location.search)) return; var href='tools/amortization-calculator.html'; var a=document.querySelector('a[href="'+href+'"]'); if(a) loadTool(href, a.textContent.trim()); })();
+  (function(){ if(/[?&]use=/.test(window.location.search)) return; var href='tools/amortization-calculator.html'; var a=document.querySelector('a[href="'+href+'"]'); if(a){ window.__nnPreloadAt=Date.now(); loadTool(href, a.textContent.trim()); } })();
   window.addEventListener('message', function(e){
     if (e.origin !== window.location.origin) return;
     var h = e.data && e.data.nnEmbedHeight;
@@ -543,7 +540,7 @@
     var target = null;
     if (e.source === frame.contentWindow) { if (view !== 'tool') return; target = frame; }
     else { var uh = document.getElementById('uhFrame'); if (uh && e.source === uh.contentWindow) target = uh; }
-    if (target) target.style.height = Math.max(300, Math.min(Math.ceil(h) + 10, 4000)) + 'px';
+    if (target) { target.style.height = Math.max(300, Math.min(Math.ceil(h) + 10, 4000)) + 'px'; if (target === frame && window.__nnAlign) { window.__nnAlign = 0; if (!(window.__nnPreloadAt && Date.now() - window.__nnPreloadAt < 2500)) { var c = document.getElementById('heroCalc'); if (c) setTimeout(function(){ c.scrollIntoView({behavior:'smooth', block:'start'}); }, 60); } } }
   });
   document.addEventListener('click',function(e){
     if(e.ctrlKey||e.metaKey||e.shiftKey||e.button!==0) return;
