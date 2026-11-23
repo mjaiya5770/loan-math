@@ -240,7 +240,7 @@ function calc(){
   if(!(P>0)||!(n>0)||isNaN(pay)||!(received>0)){document.getElementById('rMain').textContent='—';document.getElementById('verdict').textContent='Enter an amount, a term, and fees smaller than the loan itself.';document.getElementById('rows').innerHTML='';document.getElementById('results').classList.add('show');return;}
   var ta=trueAprCalc(received,pay,n),total=pay*n;
   document.getElementById('rMain').textContent=fmt(ta)+'% APR';
-  document.getElementById('verdict').textContent='Stated rate '+rate+'% becomes a true APR of '+fmt(ta)+'% once the $'+fmt(fees)+' fee counts. Total cost of the loan: $'+fmt(total+fees)+' for $'+fmt(received)+' in hand.';
+  document.getElementById('verdict').textContent='Stated rate '+rate+'% becomes a true APR of '+fmt(ta)+'% once the $'+fmt(fees)+' fee counts. Total cost of the loan: $'+fmt(total)+' for $'+fmt(received)+' in hand.';
   document.getElementById('rows').innerHTML=row('Loan amount','$'+fmt(P))+row('Upfront fees','−$'+fmt(fees))+row('Cash you receive','$'+fmt(received))
     +row('Monthly payment','$'+fmt(pay))+row('Stated rate',rate+'%')+row('True APR',fmt(ta)+'%')
     +row('Total of payments','$'+fmt(total))+row('Interest + fees (total cost)','$'+fmt(total-received));
